@@ -10,10 +10,10 @@ Servo servo_2;
 Servo servo_3;
 Servo servo_4;
 
-const int pb_1_a = 13;
-const int pb_1_b = 12;
-const int pb_2_a = 8;
-const int pb_2_b = 7;
+const int pb_1_a = 9;
+const int pb_1_b = 8;
+const int pb_2_a = 7;
+const int pb_2_b = 6;
 const int pb_3_a = 5;
 const int pb_3_b = 4;
 const int pb_4_a = 3;
@@ -67,10 +67,10 @@ void setup() {
   pinMode(potensio_3, INPUT);
   pinMode(potensio_4, INPUT);
 
-  servo_1.attach(11);
-  servo_2.attach(10);
-  servo_3.attach(9);
-  servo_4.attach(6);
+  servo_1.attach(13);
+  servo_2.attach(12);
+  servo_3.attach(11);
+  servo_4.attach(10);
 }
 
 void loop() {

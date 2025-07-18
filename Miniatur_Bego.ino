@@ -87,3 +87,39 @@ void loop() {
     waktuSebelum_D = waktuSekarang_D;
   }
 }
+
+void pb_1(){
+  if(digitalRead(pb_1_a) == 1){
+    val_pb_1++;
+  }
+  if(digitalRead(pb_1_b) == 1){
+    val_pb_1--;
+  }
+}
+
+void pb_2(){
+  if(digitalRead(pb_2_a) == 1){
+    val_pb_2++;
+  }
+  if(digitalRead(pb_2_b) == 1){
+    val_pb_2--;
+  }
+}
+
+void pb_3(){
+  if(digitalRead(pb_3_a) == 1){
+    val_pb_3++;
+  }
+  if(digitalRead(pb_3_b) == 1){
+    val_pb_3--;
+  }
+}
+
+void pb_4(){
+  if(digitalRead(pb_4_a) == 1){
+    val_pb_4++;
+  }
+  if(digitalRead(pb_4_b) == 1){
+    val_pb_4--;
+  }
+}

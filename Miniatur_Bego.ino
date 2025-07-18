@@ -32,6 +32,17 @@ int val_potensio_2 = 0;
 int val_potensio_3 = 0;
 int val_potensio_4 = 0;
 
+// millis untuk val_pb
+int interval_A = 300;
+int interval_B = 300;
+int interval_C = 300;
+int interval_D = 300;
+
+unsigned long waktuSebelum_A = 0;
+unsigned long waktuSebelum_B = 0;
+unsigned long waktuSebelum_C = 0;
+unsigned long waktuSebelum_D = 0;
+
 void setup() {
   Serial.begin(115200);
   
@@ -56,6 +67,23 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  unsigned long waktuSekarang_A = millis();
+  if(waktuSekarang_A - waktuSebelum_A >= interval_A || waktuSekarang_A < waktuSebelum_A){
+    waktuSebelum_A = waktuSekarang_A;
+  }
 
+  unsigned long waktuSekarang_B = millis();
+  if(waktuSekarang_B - waktuSebelum_B >= interval_B || waktuSekarang_B < waktuSebelum_B){
+    waktuSebelum_B = waktuSekarang_B;
+  }
+
+  unsigned long waktuSekarang_C = millis();
+  if(waktuSekarang_C - waktuSebelum_C >= interval_C || waktuSekarang_C < waktuSebelum_C){
+    waktuSebelum_C = waktuSekarang_C;
+  }
+
+  unsigned long waktuSekarang_D = millis();
+  if(waktuSekarang_D - waktuSebelum_D >= interval_D || waktuSekarang_D < waktuSebelum_D){
+    waktuSebelum_D = waktuSekarang_D;
+  }
 }

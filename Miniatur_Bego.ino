@@ -91,35 +91,59 @@ void loop() {
 void pb_1(){
   if(digitalRead(pb_1_a) == 1){
     val_pb_1++;
+    if(val_pb_1 >= 180){
+      val_pb_1 = 180;
+    }
   }
   if(digitalRead(pb_1_b) == 1){
     val_pb_1--;
+    if(val_pb_1 <= 0){
+      val_pb_1 = 0;
+    }
   }
 }
 
 void pb_2(){
   if(digitalRead(pb_2_a) == 1){
     val_pb_2++;
+    if(val_pb_2 >= 180){
+      val_pb_2 = 180;
+    }
   }
   if(digitalRead(pb_2_b) == 1){
     val_pb_2--;
+    if(val_pb_2 <= 0){
+      val_pb_2 = 0;
+    }
   }
 }
 
 void pb_3(){
   if(digitalRead(pb_3_a) == 1){
     val_pb_3++;
+    if(val_pb_3 >= 180){
+      val_pb_3 = 180;
+    }
   }
   if(digitalRead(pb_3_b) == 1){
     val_pb_3--;
+    if(val_pb_3 <= 0){
+      val_pb_3 = 0;
+    }
   }
 }
 
 void pb_4(){
   if(digitalRead(pb_4_a) == 1){
     val_pb_4++;
+    if(val_pb_4 >= 180){
+      val_pb_4 = 180;
+    }
   }
   if(digitalRead(pb_4_b) == 1){
     val_pb_4--;
+    if(val_pb_4 <= 0){
+      val_pb_4 = 0;
+    }
   }
 }

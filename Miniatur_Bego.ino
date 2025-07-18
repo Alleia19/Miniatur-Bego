@@ -1,8 +1,3 @@
-//const int servo_1 = 11;
-//const int servo_2 = 10;
-//const int servo_3 = 9;
-//const int servo_4 = 6;
-
 #include <Servo.h>
 
 Servo servo_1;

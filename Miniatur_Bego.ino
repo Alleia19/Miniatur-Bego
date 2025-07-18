@@ -52,11 +52,6 @@ unsigned long waktuSebelum_D = 0;
 
 void setup() {
   Serial.begin(115200);
-  
-  pinMode(servo_1, OUTPUT);
-  pinMode(servo_2, OUTPUT);
-  pinMode(servo_3, OUTPUT);
-  pinMode(servo_4, OUTPUT);
 
   pinMode(pb_1_a, INPUT);
   pinMode(pb_1_b, INPUT);
@@ -83,24 +78,28 @@ void loop() {
   if(waktuSekarang_A - waktuSebelum_A >= interval_A || waktuSekarang_A < waktuSebelum_A){
     waktuSebelum_A = waktuSekarang_A;
     pb_1();
+    servo_1.write(val_pb_1);
   }
 
   unsigned long waktuSekarang_B = millis();
   if(waktuSekarang_B - waktuSebelum_B >= interval_B || waktuSekarang_B < waktuSebelum_B){
     waktuSebelum_B = waktuSekarang_B;
     pb_2();
+    servo_2.write(val_pb_2);
   }
 
   unsigned long waktuSekarang_C = millis();
   if(waktuSekarang_C - waktuSebelum_C >= interval_C || waktuSekarang_C < waktuSebelum_C){
     waktuSebelum_C = waktuSekarang_C;
     pb_3();
+    servo_3.write(val_pb_3);
   }
 
   unsigned long waktuSekarang_D = millis();
   if(waktuSekarang_D - waktuSebelum_D >= interval_D || waktuSekarang_D < waktuSebelum_D){
     waktuSebelum_D = waktuSekarang_D;
     pb_4();
+    servo_4.write(val_pb_4);
   }
 }
 

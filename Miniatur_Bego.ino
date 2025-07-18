@@ -1,7 +1,14 @@
-const int servo_1 = 11;
-const int servo_2 = 10;
-const int servo_3 = 9;
-const int servo_4 = 6;
+//const int servo_1 = 11;
+//const int servo_2 = 10;
+//const int servo_3 = 9;
+//const int servo_4 = 6;
+
+#include <Servo.h>
+
+Servo servo_1;
+Servo servo_2;
+Servo servo_3;
+Servo servo_4;
 
 const int pb_1_a = 13;
 const int pb_1_b = 12;
@@ -64,27 +71,36 @@ void setup() {
   pinMode(potensio_2, INPUT);
   pinMode(potensio_3, INPUT);
   pinMode(potensio_4, INPUT);
+
+  servo_1.attach(11);
+  servo_2.attach(10);
+  servo_3.attach(9);
+  servo_4.attach(6);
 }
 
 void loop() {
   unsigned long waktuSekarang_A = millis();
   if(waktuSekarang_A - waktuSebelum_A >= interval_A || waktuSekarang_A < waktuSebelum_A){
     waktuSebelum_A = waktuSekarang_A;
+    pb_1();
   }
 
   unsigned long waktuSekarang_B = millis();
   if(waktuSekarang_B - waktuSebelum_B >= interval_B || waktuSekarang_B < waktuSebelum_B){
     waktuSebelum_B = waktuSekarang_B;
+    pb_2();
   }
 
   unsigned long waktuSekarang_C = millis();
   if(waktuSekarang_C - waktuSebelum_C >= interval_C || waktuSekarang_C < waktuSebelum_C){
     waktuSebelum_C = waktuSekarang_C;
+    pb_3();
   }
 
   unsigned long waktuSekarang_D = millis();
   if(waktuSekarang_D - waktuSebelum_D >= interval_D || waktuSekarang_D < waktuSebelum_D){
     waktuSebelum_D = waktuSekarang_D;
+    pb_4();
   }
 }
 

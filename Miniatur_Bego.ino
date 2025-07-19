@@ -19,11 +19,6 @@ const int potensio_2 = A1;
 const int potensio_3 = A2;
 const int potensio_4 = A3;
 
-int val_servo_1 = 0;
-int val_servo_2 = 0;
-int val_servo_3 = 0;
-int val_servo_4 = 0;
-
 int val_pb_1 = 0;
 int val_pb_2 = 0;
 int val_pb_3 = 0;
